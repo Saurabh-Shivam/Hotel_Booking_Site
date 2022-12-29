@@ -35,6 +35,7 @@ const New = ({ inputs, title }) => {
 
       // making api request by passing newUser object
       await axios.post("/auth/register", newUser);
+      alert("Success");
 
       // console.log(uploadRes.data);
     } catch (err) {

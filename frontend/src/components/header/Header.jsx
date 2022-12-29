@@ -13,14 +13,14 @@ import { useContext, useState } from "react";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
 import { AuthContext } from "../../context/AuthContext";
 
 const Header = ({ type }) => {
-   // for search bar
+  // for search bar
   const [destination, setDestination] = useState("");
-   // to open and close date ilog box when clicked
+  // to open and close date ilog box when clicked
   const [openDate, setOpenDate] = useState(false);
   // to set the date in date dialog box
   const [dates, setDates] = useState([
@@ -30,7 +30,7 @@ const Header = ({ type }) => {
       key: "selection",
     },
   ]);
-    // to open and close options dialog box when clicked
+  // to open and close options dialog box when clicked
   const [openOptions, setOpenOptions] = useState(false);
   // to set values in options dialog box
   const [options, setOptions] = useState({
@@ -43,7 +43,7 @@ const Header = ({ type }) => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
 
-// function to change the values in option dialog box
+  // function to change the values in option dialog box
   const handleOption = (name, operation) => {
     setOptions((prev) => {
       return {
@@ -58,8 +58,13 @@ const Header = ({ type }) => {
   // function to handle search
   const handleSearch = () => {
     dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
-     // when the search bar button is clicked with right information, user will be directed to the /hotels route with those informations
+    // when the search bar button is clicked with right information, user will be directed to the /hotels route with those informations
     navigate("/hotels", { state: { destination, dates, options } });
+  };
+
+  // for going to the login route
+  const handleClick = () => {
+    navigate("/login");
   };
 
   return (
@@ -72,23 +77,33 @@ const Header = ({ type }) => {
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
-            <span>Stays</span>
+            <Link className="headerList" to="/">
+              <span>Stays</span>
+            </Link>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faPlane} />
-            <span>Flights</span>
+            <Link className="headerList" to="/flights">
+              <span>Flights</span>
+            </Link>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
-            <span>Car rentals</span>
+            <Link className="headerList" to="/carRentals">
+              <span>Car rentals</span>
+            </Link>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
-            <span>Attractions</span>
+            <Link className="headerList" to="attractions">
+              <span>Attractions</span>
+            </Link>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faTaxi} />
-            <span>Airport taxis</span>
+            <Link className="headerList" to="airportTaxis">
+              <span>Airport taxis</span>
+            </Link>
           </div>
         </div>
         {type !== "list" && (
@@ -98,11 +113,15 @@ const Header = ({ type }) => {
             </h1>
             <p className="headerDesc">
               Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Lamabooking account
+              more with a free Booking account
             </p>
-            {!user && <button className="headerBtn">Sign in / Register</button>}
-           
-              {/* Search bar  */}
+            {!user && (
+              <button onClick={handleClick} className="headerBtn">
+                Sign in / Login
+              </button>
+            )}
+
+            {/* Search bar  */}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
@@ -123,7 +142,7 @@ const Header = ({ type }) => {
                   "MM/dd/yyyy"
                 )}`}</span>
                 {openDate && (
-                    /* using react date feature to bring date dailog box  */
+                  /* using react date feature to bring date dailog box  */
                   <DateRange
                     editableDateInputs={true}
                     onChange={(item) => setDates([item.selection])}
@@ -143,7 +162,7 @@ const Header = ({ type }) => {
                 {openOptions && (
                   <div className="options">
                     <div className="optionItem">
-                             {/* making custom option dailog box */}
+                      {/* making custom option dailog box */}
                       <span className="optionText">Adult</span>
                       <div className="optionCounter">
                         <button

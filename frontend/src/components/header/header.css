@@ -28,10 +28,27 @@
   gap: 10px;
 }
 
+.headerList {
+  text-decoration: none;
+  color: white;
+  /* margin-top: 3rem; */
+}
+
+.headerList span {
+  margin-top: 3rem;
+}
+
+.headerList span:hover {
+  font-weight: 300;
+}
+
+
 .headerListItem.active {
   border: 1px solid white;
   padding: 10px;
   border-radius: 20px;
+  width: 6rem;
+  height: 5rem;
 }
 
 .headerDesc {
