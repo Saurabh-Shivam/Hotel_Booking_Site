@@ -1,4 +1,4 @@
-#Hotel_Booking_Site
+# Hotel_Booking_Site
 
 #output
 ![Screenshot (70)](https://user-images.githubusercontent.com/60539011/209934890-ab96005c-73d3-46aa-b163-18386ba33e60.png)
