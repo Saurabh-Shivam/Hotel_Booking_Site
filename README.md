@@ -1,13 +1,11 @@
 # Hotel_Booking_Site
 
 #output
-![Screenshot (72)](https://user-images.githubusercontent.com/60539011/210043952-0d3c5e66-7e1d-4052-800a-467051664156.png)
-![Screenshot (73)](https://user-images.githubusercontent.com/60539011/210043959-890e03c6-ded2-48a3-914d-55902102170e.png)
-![bookingSite1](https://user-images.githubusercontent.com/60539011/210043960-4fa31d7d-3366-4d10-ba82-404a47c76f5a.png)
-![bookingSite2](https://user-images.githubusercontent.com/60539011/210043961-302987d4-99e9-4537-ac2d-82cdf25974ab.png)
-![Screenshot (70)](https://user-images.githubusercontent.com/60539011/210043963-ee826d3f-bbf8-49a5-ab70-78e079a2705d.png)
-
-
+![bookingSite1](https://user-images.githubusercontent.com/60539011/210044082-339bb669-4fea-4702-9c6d-310e6d767d4b.png)
+![bookingSite2](https://user-images.githubusercontent.com/60539011/210044075-7116d4b5-86ca-426e-817e-5ee63eb32075.png)
+![Screenshot (70)](https://user-images.githubusercontent.com/60539011/210044078-9c098ccf-8d4e-42e5-bb46-a6d0c3782107.png)
+![Screenshot (72)](https://user-images.githubusercontent.com/60539011/210044079-e6533d61-bbc0-4c7f-b09a-07f6b638cd72.png)
+![Screenshot (73)](https://user-images.githubusercontent.com/60539011/210044080-96674ed8-c97e-47fa-add6-36400ac510cb.png)
 
 https://user-images.githubusercontent.com/60539011/209934819-19bb940b-a415-4710-858f-d21298971465.mp4
 
